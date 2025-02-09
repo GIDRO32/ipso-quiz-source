@@ -42,7 +42,7 @@ public class GameFlow : MonoBehaviour
 
     private void Start()
     {
-        ExtrasButton.SetActive(false);
+        ExtrasButton.SetActive(true);
         popupPanel.SetActive(false);
         resultPopup.SetActive(false);
         gameUI.SetActive(false);
@@ -150,7 +150,6 @@ public void CheckResults()
     countResult.text = "You gave " + correctAnswersCount.ToString() + "/" + questions.Length.ToString() + " Correct answers";
     if(correctAnswersCount == questions.Length)
     {
-        ExtrasButton.SetActive(true);
         judgement.text = "PERFECT!";
         effects.PlayOneShot(correctDing);
     }
